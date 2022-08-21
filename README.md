@@ -2,5 +2,10 @@
 
 Adaptive Cruise Control (ACC) is a real-time system that controls the set cruising speed of a vehicle and maintains a safe distance from vehicles ahead. The main purpose of the system is to reduce driver fatigue during long journeys.
 
-* In our project, we used the TI Robotics Systems Learning Kit (TI-RSLK) to act as a vehicle.
-We performed system identification, modeled the system and designed a PID controller for it. The PID controller works around the encoder readings of the wheel motors to try to maintain constant speed. The distance from the lead vehicle detected using ultrasonic sensor HC-SR04 decides the mode the vehicle operates under.
+* We used the TI Robotics Systems Learning Kit (TI-RSLK) to act as a vehicle.
+* TI-RSLK uses Microcontroller MSP432 which was programmed using Energia IDE.
+* Main peripherals are DC motors with in-built encoders and HC-SR04 ultrasonic sensor.
+* We performed system identification, modeled the system and designed a PID controller for it.
+* The mode of operation of the bot is decided by the proximity with the lead vehicle. Elegoo robot car kit was used for lead vehicle.
+  - Constant speed logic utilizes PID control loop depending on feedback from the encoders and ultrasonic sensor. 
+  - Safe distance logic governed by open loop control derived from data gathered during experiments.
